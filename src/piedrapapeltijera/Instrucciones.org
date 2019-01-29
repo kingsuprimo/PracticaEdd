@@ -2,6 +2,8 @@
 2. Busca "malos olores" (bad smells) en el código
 3. Refactoriza, siguiendo los resultado de los dos primeros pasos.
 
-Pistas, considera separar Game de Main, en una clase propia con varias funciones.
-Renombrar variables y funciones. Buscar código semejante y hacer una función para 
-ese código...
+Pistas, considera separar Game de Main en una clase propia con varias funciones.
+Renombrar variables y funciones. 
+Buscar código semejante/duplicado (PMD podría servir para esto -el PMD instalado aparte-)
+ y hacer una función para ese código...
+Busca si hay atributos en una clase que encapsular
