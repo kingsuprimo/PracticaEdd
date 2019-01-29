@@ -1,0 +1,7 @@
+1. Analiza con easyPMD, (analizador estático de código).
+2. Busca "malos olores" (bad smells) en el código
+3. Refactoriza, siguiendo los resultado de los dos primeros pasos.
+
+Pistas, considera separar Game de Main, en una clase propia con varias funciones.
+Renombrar variables y funciones. Buscar código semejante y hacer una función para 
+ese código...
