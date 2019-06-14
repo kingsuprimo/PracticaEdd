@@ -1,21 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package piedrapapeltijera;
 
-/**
- *
- * @author jmsa
- */
-/**
- *
- */
 class Player
 {
-    int wins;      // # of wins
-    int winTotal;
+    private int wins;      // # of wins
     /**
      * Randomly choose rock, paper, or scissors
      */
@@ -23,6 +10,7 @@ class Player
     {
         String choice = "";
         int c = (int)(Math.random()*3);
+        
         switch(c) {
             case 0:
                 choice = ("rock");
@@ -33,16 +21,17 @@ class Player
             case 2:
                 choice = ("scissors");
                 break;
+            default: break;    
         }
         return choice;
     }
     public int setWins() 
     {
-        int winTotal = wins++;
-        return winTotal;
+        wins = wins++;
+        return wins;
     }
     public int getWins() 
     {
-        return(wins);
+        return wins;
     }
 }

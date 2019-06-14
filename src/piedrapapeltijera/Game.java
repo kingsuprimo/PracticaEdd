@@ -1,32 +1,27 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package piedrapapeltijera;
 
-/**
- *
- * @author jmsa
- */
-/**
- * Simulate a game of Rock, Paper, Scissors
- */
-public class Game 
-{
-    public static void main(String args[])
-    {
+public class Game {
+    
+        private boolean gameWon = false;  
+        private String p1Choice;
+        String p2Choice;
+        private  int roundsPlayed = 0;    // Number of rounds played
+        private  Player p1;
+        private  Player p2;
+        int p1Wins = p1.getWins();
+        int p2Wins = p2.getWins();
+        private int draw = 0;
+
+        
+ 
+        
+    public void Jugar(){
+        
         Player p1 = new Player();
         Player p2 = new Player();
-        boolean gameWon = false;  
-        int roundsPlayed = 0;    // Number of rounds played
-        int p1Wins = p1.wins;
-        int p2Wins = p2.wins;
-        int draw = 0;
-        String p1Choice;
-        String p2Choice;
-        // Game Loop
-        do
+        
+         // MainJuego Loop // 
+
         {
             System.out.println("***** Round: " +
                 roundsPlayed + " *********************\n");
@@ -38,17 +33,20 @@ public class Game
             p2Choice = p2.playerChoice();
             System.out.println("Player 2: " + p2Choice+ 
                 "\t Player 2 Total Wins: " + p2Wins);
-            if((p1Choice.equals("rock"))&&(p2Choice.equals("paper")))
+            
+            
+            
+            if (p1Choice.equals("rock")&&p2Choice.equals("paper"))
             {
                 System.out.println("Player 2 Wins");
                 p2Wins++;  // trying a couple different ways to get count to work
             }
-            else if((p1Choice.equals("paper"))&&(p2Choice.equals("rock")))
+            else if (p1Choice.equals("paper") && p2Choice.equals("rock"))
             {
                 p1Wins++;
                 System.out.println("Player 1 Wins");
             }
-            else if((p1Choice.equals("rock"))&&(p2Choice.equals("scissors")))
+            else if(p1Choice.equals("rock")&&p2Choice.equals("scissors"))
             {
                 p1Wins = p1.setWins();
                 System.out.println("Player 1 Wins");
@@ -68,19 +66,20 @@ public class Game
                 p2Wins = p2.setWins();
                 System.out.println("Player 2 Wins");
             }
-            if(p1Choice==p2Choice)
+            if(p1Choice.equals(p2Choice))
             {
                 draw++;
                 System.out.println("\n\t\t\t Draw \n");
             }
+      
             roundsPlayed++;
-            if((p1.getWins()>=3)||(p2.getWins()>=3))
-            {
-                gameWon = true;
-                System.out.println("GAME WON");
-            }
-            System.out.println();
-        } while(gameWon != true);
+            
+        }
+ 
     }
-}
+            public int getRoundPlayeds(){
+            return roundsPlayed;
+        }
+    }
+    
 
